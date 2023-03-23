@@ -1,27 +1,21 @@
 pipeline {
-    agent none
+    agent any
     stages{
         stage('start') {
-          agent{
-            label "master"
-          }
+         
             steps {
                 echo "start passed successfully"
             }
         }
         stage('compile') {
-          agent{
-            label "master"
-          }
+          
             steps {
                 echo "compile passed successfully"   
             }
             
         }
         stage('deploy') {
-          agent{
-            label "master"
-          }
+          
             steps {
                 echo "deploy"    
             }   
